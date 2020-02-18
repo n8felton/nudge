@@ -513,8 +513,8 @@ def main():
         "If you do not update your computer, you may lose access to some items necessary for your day-to-day tasks.\n\n"
         "To begin the update, simply click on the button below and follow the provided steps.",
     )
-    paragraph_title_text = nudge_prefs.get(
-        "paragraph_title_text", "A security update is required on your machine."
+    summary_title_text = nudge_prefs.get(
+        "summary_title_text", "A security update is required on your machine."
     )
     PATH_TO_APP = nudge_prefs.get(
         "path_to_app", "/Applications/Install macOS Mojave.app"
@@ -716,7 +716,7 @@ def main():
     # Setup the UI fields
     nudge.views["field.titletext"].setStringValue_(main_title_text)
     nudge.views["field.subtitletext"].setStringValue_(main_subtitle_text)
-    nudge.views["field.updatetext"].setStringValue_(paragraph_title_text)
+    nudge.views["field.updatetext"].setStringValue_(summary_title_text)
     nudge.views["field.summarytext"].setStringValue_(summary_text)
     nudge.views["field.h1text"].setStringValue_(button_title_text)
     nudge.views["field.h2text"].setStringValue_(button_sub_titletext)
