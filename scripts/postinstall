@@ -14,43 +14,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# If you change your agent file name, update the following line
-launch_agent_plist_name='com.erikng.nudge.plist'
-
-# Base paths
-launch_agent_base_path='Library/LaunchAgents/'
-
-# Load agent if installing to a running system
+# Only attempt to actively load the LaunchAgent if installing to a live system.
 if [[ $3 == "/" ]] ; then
-  # Fail the install if the admin forgets to change their paths and they don't exist.
-  if [ ! -e "$3/${launch_agent_base_path}${launch_agent_plist_name}" ]; then
-    echo "LaunchAgent missing, exiting"
-    exit 1
-  fi
+  LAUNCHD_LABEL="com.erikng.nudge"
 
-  # Make the Log path 777 to cheat - do this before loading LaunchAgent
-  /bin/mkdir -p "$3/Library/nudge/Logs"
-  /bin/chmod -R 777 "$3/Library/nudge/Logs"
+  INSTALLER_USER=$(/usr/bin/stat -f '%Su' ${HOME})
+  INSTALLER_USER_UID=$(/usr/bin/id -u ${INSTALLER_USER})
+  echo "INSTALLER USER: ${INSTALLER_USER}"
+  echo "UID: ${INSTALLER_USER_UID}"
 
-  # Current console user information
-  console_user=$(/usr/bin/stat -f "%Su" /dev/console)
-  console_user_uid=$(/usr/bin/id -u "$console_user")
+  product_version=$(sw_vers -productVersion) # 10.14.6
+  os_vers=( ${(@s:.:)product_version} )      # ( 10 14 6 )
+  os_vers_major="${os_vers[1]}"              # 10
+  os_vers_minor="${os_vers[2]}"              # 14
+  os_vers_patch="${os_vers[3]}"              # 6
+  os_vers_build=$(sw_vers -buildVersion)     # 18G103
 
-  # Only enable the LaunchAgent if there is a user logged in, otherwise rely on built in LaunchAgent behavior
-  if [[ -z "$console_user" ]]; then
-    echo "Did not detect user"
-  elif [[ "$console_user" == "loginwindow" ]]; then
-    echo "Detected Loginwindow Environment"
-  elif [[ "$console_user" == "_mbsetupuser" ]]; then
-    echo "Detect SetupAssistant Environment"
+  # If we're on OS X 10.10 or older
+  if [[ "${os_vers_minor}" -le 10 ]]; then
+    launchctl asuser ${INSTALLER_USER_UID} launchctl load -w "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
   else
-    # This is a deprecated command, but until Apple kills it, it is going to be used
-    /bin/launchctl asuser "${console_user_uid}" /bin/launchctl list | /usr/bin/grep 'nudge'
-    # Unload the agent so it can be triggered on re-install
-    if [[ $? -eq 0 ]]; then
-      /bin/launchctl asuser "${console_user_uid}" /bin/launchctl unload "${launch_agent_plist_name}"
+  # Assuming 10.11+
+    # Is the LaunchAgent already installed?
+    if launchctl blame gui/${INSTALLER_USER_UID}/$LAUNCHD_LABEL; then
+      launchctl bootout gui/${INSTALLER_USER_UID}/$LAUNCHD_LABEL
     fi
-    # Load the launch agent
-    /bin/launchctl asuser "${console_user_uid}" /bin/launchctl load "$3${launch_agent_base_path}${launch_agent_plist_name}"
+    launchctl bootstrap gui/${INSTALLER_USER_UID} "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
   fi
 fi
