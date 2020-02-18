@@ -13,13 +13,16 @@
             <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="850" height="450"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <value key="minSize" type="size" width="850" height="450"/>
+            <value key="maxSize" type="size" width="850" height="450"/>
+            <value key="minFullScreenContentSize" type="size" width="850" height="450"/>
             <value key="maxFullScreenContentSize" type="size" width="850" height="450"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="850" height="450"/>
+                <rect key="frame" x="0.0" y="0.0" width="850" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField identifier="field.usernametext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zQ2-5X-sqp" userLabel="Username">
-                        <rect key="frame" x="13" y="220" width="124" height="20"/>
+                        <rect key="frame" x="13" y="225" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="sPS-XI-38Z"/>
                             <constraint firstAttribute="width" constant="120" id="wq3-RW-HSa"/>
@@ -31,7 +34,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.hostnametext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ppi-JG-Zhu" userLabel="Hostname">
-                        <rect key="frame" x="13" y="200" width="124" height="20"/>
+                        <rect key="frame" x="13" y="205" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="XQn-Qg-PuA"/>
                             <constraint firstAttribute="height" constant="20" id="nv7-U9-Kyn"/>
@@ -43,7 +46,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.serialnumbertext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7j-tx-Mma" userLabel="Serial Number">
-                        <rect key="frame" x="13" y="180" width="124" height="20"/>
+                        <rect key="frame" x="13" y="185" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="NDV-Cp-ab9"/>
                             <constraint firstAttribute="height" constant="20" id="hPt-JT-dy4"/>
@@ -55,7 +58,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.updatedtext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ub-Lm-cLs" userLabel="Fully Updated">
-                        <rect key="frame" x="13" y="160" width="124" height="20"/>
+                        <rect key="frame" x="13" y="165" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="3SY-VW-u2j"/>
                             <constraint firstAttribute="height" constant="20" id="DPS-Tn-OG0"/>
@@ -67,7 +70,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.daysremainingtext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-gB-FjQ" userLabel="Days Remaining">
-                        <rect key="frame" x="13" y="140" width="124" height="20"/>
+                        <rect key="frame" x="13" y="145" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="0F0-M3-S6p"/>
                             <constraint firstAttribute="height" constant="20" id="fnL-K6-bLi"/>
@@ -79,10 +82,9 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.username" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-nF-ZoC" userLabel="username">
-                        <rect key="frame" x="148" y="220" width="124" height="20"/>
+                        <rect key="frame" x="148" y="225" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="5hT-aB-Xcv"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="SkF-RD-wxq"/>
                             <constraint firstAttribute="height" constant="20" id="dRe-lv-bjx"/>
                         </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="erik" allowsEditingTextAttributes="YES" id="DYU-vu-5Wl" userLabel="username">
@@ -92,11 +94,10 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.hostname" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-Ly-hND" userLabel="hostname">
-                        <rect key="frame" x="148" y="200" width="124" height="20"/>
+                        <rect key="frame" x="148" y="205" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Kn0-es-Nlf"/>
                             <constraint firstAttribute="width" constant="120" id="QZn-TY-2cg"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Vod-Yq-Oef"/>
                         </constraints>
                         <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="DIV-DEPTYYNN" allowsEditingTextAttributes="YES" id="kFj-fI-phu" userLabel="username">
                             <font key="font" metaFont="system"/>
@@ -105,11 +106,10 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.serialnumber" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4uX-35-q1L" userLabel="serialnumber">
-                        <rect key="frame" x="148" y="180" width="124" height="20"/>
+                        <rect key="frame" x="148" y="185" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="fkO-Zw-HG1"/>
                             <constraint firstAttribute="height" constant="20" id="uFb-N0-G9b"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zVu-wb-eIC"/>
                         </constraints>
                         <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="C00000000000" allowsEditingTextAttributes="YES" id="FTX-xn-jhf" userLabel="serialnumber">
                             <font key="font" metaFont="system"/>
@@ -118,11 +118,10 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.updated" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="miP-FN-pTh" userLabel="update">
-                        <rect key="frame" x="148" y="160" width="124" height="20"/>
+                        <rect key="frame" x="148" y="165" width="124" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="WU0-p7-ERC"/>
                             <constraint firstAttribute="height" constant="20" id="h8g-7i-RGu"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="kEz-Xc-BRP"/>
                         </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="No" allowsEditingTextAttributes="YES" id="Yq6-qa-b3s" userLabel="update">
                             <font key="font" metaFont="system"/>
@@ -131,9 +130,8 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="field.daysremaining" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gPO-y7-Dyo" userLabel="daysremaining">
-                        <rect key="frame" x="148" y="140" width="124" height="20"/>
+                        <rect key="frame" x="148" y="145" width="124" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="3Bu-25-KcE"/>
                             <constraint firstAttribute="height" constant="20" id="twS-IN-2La"/>
                             <constraint firstAttribute="width" constant="120" id="xZh-ar-She"/>
                         </constraints>
@@ -143,44 +141,72 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField identifier="field.paragraph1" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-zv-f94">
-                        <rect key="frame" x="319" y="281" width="514" height="48"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="A fully up-to-date device is required to ensure that IT can your accurately protect your computer." id="Fn3-qL-8OR">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField identifier="field.paragraph3" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sw2-7z-3dN">
-                        <rect key="frame" x="319" y="198" width="514" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="To begin the update, simply click on the button below and follow the provided steps." id="4OZ-zE-F88">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView identifier="image.companylogo" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-ti-fFv">
-                        <rect key="frame" x="15" y="275" width="256" height="140"/>
+                    <textField identifier="field.titletext" horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-cB-pof" userLabel="field.titletext">
+                        <rect key="frame" x="313" y="376" width="524" height="64"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="140" id="SoE-44-UWp"/>
-                            <constraint firstAttribute="width" constant="256" id="T7a-it-u4i"/>
+                            <constraint firstAttribute="width" constant="520" id="jpR-f3-xPs"/>
+                            <constraint firstAttribute="height" constant="64" id="yUx-Wj-Jp6"/>
                         </constraints>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="OpG-fY-uIj" userLabel="Logo"/>
+                        <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" placeholderString="macOS Update" id="HSg-9C-Sp7" userLabel="main_title_text">
+                            <font key="font" metaFont="system" size="50"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView identifier="image.updatess" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rsE-1J-xm0" userLabel="image.updatess">
+                        <rect key="frame" x="771" y="376" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="Yzo-rN-gKj"/>
+                            <constraint firstAttribute="height" constant="64" id="svA-rf-ObU"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="FjD-S2-TgA" userLabel="Update Screen Shot"/>
                     </imageView>
-                    <textField identifier="field.updatetext" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0IP-CD-Ews">
-                        <rect key="frame" x="300" y="334" width="544" height="19"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textField identifier="field.subtitletext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fOI-Ls-2zq" userLabel="field.subtitletext">
+                        <rect key="frame" x="313" y="356" width="524" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="6Si-fP-GUX"/>
+                            <constraint firstAttribute="width" constant="520" id="Wpw-MV-0es"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="A friendly reminder from your local IT team" id="hEf-Zz-rpZ">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField identifier="field.updatetext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0IP-CD-Ews" userLabel="field.updatetext">
+                        <rect key="frame" x="313" y="336" width="524" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SIO-3M-c1X"/>
+                            <constraint firstAttribute="width" constant="520" id="kW8-Ks-Xwz"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="A security update is required on your machine." id="c5i-I9-ozT">
                             <font key="font" metaFont="systemBold" size="12"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button identifier="button.ok" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-hw-zti">
-                        <rect key="frame" x="767" y="10" width="75" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField identifier="field.paragraph1" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-zv-f94" userLabel="field.paragraph1">
+                        <rect key="frame" x="313" y="96" width="524" height="240"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="520" id="cUg-4V-g58"/>
+                            <constraint firstAttribute="height" constant="240" id="olJ-fF-BKR"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="A fully up-to-date device is required to ensure that IT can your accurately protect your computer." id="Fn3-qL-8OR">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView identifier="image.companylogo" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-ti-fFv">
+                        <rect key="frame" x="15" y="280" width="256" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="SoE-44-UWp"/>
+                            <constraint firstAttribute="width" constant="256" id="T7a-it-u4i"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="OpG-fY-uIj" userLabel="Logo"/>
+                    </imageView>
+                    <button identifier="button.ok" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-hw-zti">
+                        <rect key="frame" x="766" y="8" width="75" height="32"/>
                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nMp-g9-fBF">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -189,69 +215,40 @@ DQ
 </string>
                         </buttonCell>
                     </button>
-                    <button identifier="button.understand" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nri-FN-pra">
-                        <rect key="frame" x="615" y="10" width="125" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button identifier="button.understand" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nri-FN-pra">
+                        <rect key="frame" x="628" y="8" width="120" height="32"/>
                         <buttonCell key="cell" type="push" title="I understand." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="S1o-DP-7sB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <button identifier="button.update" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-G4-rs2">
-                        <rect key="frame" x="316" y="10" width="150" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button identifier="button.moreinfo" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-vh-8RV">
+                        <rect key="frame" x="9" y="8" width="98" height="32"/>
+                        <buttonCell key="cell" type="push" title="More Info" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="een-NO-IKf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button identifier="button.update" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-G4-rs2">
+                        <rect key="frame" x="309" y="8" width="140" height="32"/>
                         <buttonCell key="cell" type="push" title="Update Machine" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nDt-wz-eTj">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <textField identifier="field.h1text" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wk9-N2-JLE">
-                        <rect key="frame" x="317" y="65" width="516" height="19"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textField identifier="field.h1text" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wk9-N2-JLE" userLabel="button_title_text">
+                        <rect key="frame" x="313" y="71" width="178" height="15"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Not getting this notification?" id="iii-Xl-zbK">
                             <font key="font" metaFont="systemBold" size="12"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView identifier="image.updatess" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsE-1J-xm0">
-                        <rect key="frame" x="320" y="116" width="512" height="82"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="FjD-S2-TgA" userLabel="Logo"/>
-                    </imageView>
                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Jd7-Ox-0o6">
-                        <rect key="frame" x="283" y="65" width="5" height="320"/>
+                        <rect key="frame" x="283" y="65" width="5" height="325"/>
                     </box>
-                    <textField identifier="field.paragraph2" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0It-r9-Fq3">
-                        <rect key="frame" x="319" y="237" width="514" height="39"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="If you do not update your computer, you may lose access to some items necessary for your day-to-day tasks." id="GjV-FJ-YKv">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField identifier="field.titletext" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-cB-pof">
-                        <rect key="frame" x="300" y="403" width="544" height="37"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="macOS Update" allowsEditingTextAttributes="YES" id="HSg-9C-Sp7">
-                            <font key="font" metaFont="system" size="33"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField identifier="field.subtitletext" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOI-Ls-2zq">
-                        <rect key="frame" x="300" y="358" width="544" height="15"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="A friendly reminder from your local IT team" id="hEf-Zz-rpZ">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField identifier="field.h2text" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-gL-fiT">
-                        <rect key="frame" x="318" y="45" width="515" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textField identifier="field.h2text" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-gL-fiT" userLabel="button_sub_titletext">
+                        <rect key="frame" x="313" y="46" width="204" height="15"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="You can also enroll manually below:" id="VYd-c3-JqY">
                             <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -259,54 +256,71 @@ DQ
                         </textFieldCell>
                     </textField>
                     <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-mz-elL">
-                        <rect key="frame" x="15" y="229" width="265" height="74"/>
+                        <rect key="frame" x="13" y="231" width="270" height="74"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </box>
-                    <button identifier="button.moreinfo" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-vh-8RV">
-                        <rect key="frame" x="9" y="13" width="102" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="More Info" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="een-NO-IKf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ZTG-gB-FjQ" firstAttribute="top" secondItem="4ub-Lm-cLs" secondAttribute="bottom" id="03R-3f-4ja"/>
                     <constraint firstItem="4ub-Lm-cLs" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="09G-c0-ggL"/>
+                    <constraint firstAttribute="trailing" secondItem="rsE-1J-xm0" secondAttribute="trailing" constant="15" id="1j5-jA-J1F"/>
+                    <constraint firstAttribute="bottom" secondItem="nri-FN-pra" secondAttribute="bottom" constant="15" id="2dF-0N-3xq"/>
+                    <constraint firstItem="s4I-G4-rs2" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="3Ey-Sa-rnq"/>
                     <constraint firstItem="Q7j-tx-Mma" firstAttribute="top" secondItem="ppi-JG-Zhu" secondAttribute="bottom" id="Ay4-3H-mFf"/>
+                    <constraint firstItem="fOI-Ls-2zq" firstAttribute="top" secondItem="tdP-cB-pof" secondAttribute="bottom" id="CRl-is-byR"/>
+                    <constraint firstItem="0IP-CD-Ews" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="DjF-Qz-YtA"/>
                     <constraint firstItem="4uX-35-q1L" firstAttribute="top" secondItem="nh5-Ly-hND" secondAttribute="bottom" id="EP5-Hv-HFw"/>
                     <constraint firstItem="dbH-nF-ZoC" firstAttribute="leading" secondItem="zQ2-5X-sqp" secondAttribute="trailing" constant="15" id="EYN-Ow-Ipo"/>
                     <constraint firstItem="ppi-JG-Zhu" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="GOs-g5-bst"/>
                     <constraint firstItem="4ub-Lm-cLs" firstAttribute="top" secondItem="Q7j-tx-Mma" secondAttribute="bottom" id="GUe-53-p9l"/>
+                    <constraint firstItem="i9y-zv-f94" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="IBB-Fe-PnX"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="leading" secondItem="nh5-Ly-hND" secondAttribute="trailing" constant="15" id="J8E-RK-Y61"/>
                     <constraint firstItem="k5o-ti-fFv" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="JPo-pj-Wnr"/>
+                    <constraint firstItem="tdP-cB-pof" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="15" id="L5Q-u1-yrh"/>
+                    <constraint firstItem="rsE-1J-xm0" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="15" id="NKy-L0-Y9c"/>
                     <constraint firstItem="dbH-nF-ZoC" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="210" id="OIc-Dr-q5R"/>
                     <constraint firstItem="nh5-Ly-hND" firstAttribute="leading" secondItem="ppi-JG-Zhu" secondAttribute="trailing" constant="15" id="PwI-So-mqX"/>
+                    <constraint firstItem="0IP-CD-Ews" firstAttribute="top" secondItem="fOI-Ls-2zq" secondAttribute="bottom" id="QCf-op-2aW"/>
                     <constraint firstItem="4uX-35-q1L" firstAttribute="leading" secondItem="Q7j-tx-Mma" secondAttribute="trailing" constant="15" id="Qdf-QE-BOn"/>
                     <constraint firstItem="miP-FN-pTh" firstAttribute="leading" secondItem="4ub-Lm-cLs" secondAttribute="trailing" constant="15" id="Rex-0D-bUQ"/>
+                    <constraint firstItem="S1w-gL-fiT" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="Rkj-lq-x86"/>
+                    <constraint firstItem="fOI-Ls-2zq" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="TEl-Cr-vVu"/>
+                    <constraint firstAttribute="trailing" secondItem="tdP-cB-pof" secondAttribute="trailing" constant="15" id="Ujo-Tr-zzZ"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="leading" secondItem="4uX-35-q1L" secondAttribute="trailing" constant="15" id="Usj-JK-XkG"/>
+                    <constraint firstItem="Bk8-hw-zti" firstAttribute="leading" secondItem="nri-FN-pra" secondAttribute="trailing" constant="30" id="Whf-D0-5yP"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="leading" secondItem="miP-FN-pTh" secondAttribute="trailing" constant="15" id="XhV-fD-PDb"/>
                     <constraint firstItem="zQ2-5X-sqp" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="Xpn-t5-X2f"/>
                     <constraint firstItem="k5o-ti-fFv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="35" id="XqG-sM-LjN"/>
                     <constraint firstItem="gPO-y7-Dyo" firstAttribute="top" secondItem="miP-FN-pTh" secondAttribute="bottom" id="Yd7-36-1dc"/>
                     <constraint firstItem="Q7j-tx-Mma" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="a4p-Jk-UEm"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="leading" secondItem="gPO-y7-Dyo" secondAttribute="trailing" constant="15" id="bIj-h8-9So"/>
+                    <constraint firstAttribute="bottom" secondItem="rzD-vh-8RV" secondAttribute="bottom" constant="15" id="dL0-lX-dwG"/>
                     <constraint firstItem="miP-FN-pTh" firstAttribute="top" secondItem="4uX-35-q1L" secondAttribute="bottom" id="dQD-rr-jWZ"/>
+                    <constraint firstAttribute="bottom" secondItem="s4I-G4-rs2" secondAttribute="bottom" constant="15" id="eX1-7I-Ds3"/>
                     <constraint firstAttribute="bottom" secondItem="Jd7-Ox-0o6" secondAttribute="bottom" constant="65" id="fOX-gF-AIe"/>
+                    <constraint firstItem="S1w-gL-fiT" firstAttribute="top" secondItem="Wk9-N2-JLE" secondAttribute="bottom" constant="10" id="gkv-lt-PPy"/>
+                    <constraint firstAttribute="trailing" secondItem="Bk8-hw-zti" secondAttribute="trailing" constant="15" id="gmg-GL-Jme"/>
                     <constraint firstItem="ppi-JG-Zhu" firstAttribute="top" secondItem="zQ2-5X-sqp" secondAttribute="bottom" id="i32-3u-Yxe"/>
                     <constraint firstItem="nh5-Ly-hND" firstAttribute="top" secondItem="dbH-nF-ZoC" secondAttribute="bottom" id="jwR-5L-oev"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="leading" secondItem="dbH-nF-ZoC" secondAttribute="trailing" constant="15" id="oGh-Sh-Ssy"/>
+                    <constraint firstItem="rzD-vh-8RV" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="qba-dn-nNY"/>
+                    <constraint firstAttribute="trailing" secondItem="i9y-zv-f94" secondAttribute="trailing" constant="15" id="qkq-Ux-Ge7"/>
+                    <constraint firstItem="Wk9-N2-JLE" firstAttribute="top" secondItem="i9y-zv-f94" secondAttribute="bottom" constant="10" id="sAu-Sn-MzO"/>
+                    <constraint firstAttribute="bottom" secondItem="Bk8-hw-zti" secondAttribute="bottom" constant="15" id="uRo-tS-dKk"/>
                     <constraint firstItem="ZTG-gB-FjQ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="15" id="vJY-uQ-EIQ"/>
+                    <constraint firstItem="s4I-G4-rs2" firstAttribute="top" secondItem="S1w-gL-fiT" secondAttribute="bottom" constant="10" id="vY0-fZ-Udk"/>
+                    <constraint firstItem="tdP-cB-pof" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="wXP-7B-Msz"/>
+                    <constraint firstItem="Wk9-N2-JLE" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="315" id="x8k-eW-Vr4"/>
                     <constraint firstItem="zQ2-5X-sqp" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="210" id="xGJ-Yf-ge8"/>
                     <constraint firstItem="gPO-y7-Dyo" firstAttribute="leading" secondItem="ZTG-gB-FjQ" secondAttribute="trailing" constant="15" id="xGy-25-vmc"/>
                     <constraint firstItem="Jd7-Ox-0o6" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="65" id="xOt-LD-Eep"/>
+                    <constraint firstItem="i9y-zv-f94" firstAttribute="top" secondItem="0IP-CD-Ews" secondAttribute="bottom" id="ziW-sh-atk"/>
                 </constraints>
             </view>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="movable" value="NO"/>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="156" y="67"/>
+            <point key="canvasLocation" x="138" y="157"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="Os4-th-lOO"/>
     </objects>
