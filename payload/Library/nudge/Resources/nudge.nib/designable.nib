@@ -37,9 +37,9 @@
                         </textFieldCell>
                     </textField>
                     <imageView identifier="image.companylogo" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-ti-fFv">
-                        <rect key="frame" x="80" y="275" width="159" height="150"/>
+                        <rect key="frame" x="53" y="275" width="213" height="150"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="OpG-fY-uIj" userLabel="Logo"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="OpG-fY-uIj" userLabel="Logo"/>
                     </imageView>
                     <textField identifier="field.username" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-nF-ZoC">
                         <rect key="frame" x="123" y="220" width="149" height="20"/>
