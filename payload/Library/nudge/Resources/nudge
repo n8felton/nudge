@@ -490,6 +490,7 @@ def main():
     button_sub_titletext = nudge_prefs.get(
         "button_sub_titletext", "Click on the button below."
     )
+    button_update_text = nudge_prefs.get("button_update_text", "Update Machine")
     cut_off_date = nudge_prefs.get("cut_off_date", False)
     cut_off_date_warning = nudge_prefs.get("cut_off_date_warning", 3)
     days_between_notifications = nudge_prefs.get("days_between_notifications", 0)
@@ -719,6 +720,7 @@ def main():
     nudge.views["field.summarytext"].setStringValue_(summary_text)
     nudge.views["field.h1text"].setStringValue_(button_title_text)
     nudge.views["field.h2text"].setStringValue_(button_sub_titletext)
+    nudge.views["button.update"].setTitle_(button_update_text)
 
     # Dynamically set information fields
     nudge.views["field.username"].setStringValue_(str(user_name))
