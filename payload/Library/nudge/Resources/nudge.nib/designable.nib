@@ -185,7 +185,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField identifier="field.paragraph1" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-zv-f94" userLabel="field.paragraph1">
+                    <textField identifier="field.summarytext" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-zv-f94" userLabel="field.paragraph1">
                         <rect key="frame" x="313" y="96" width="524" height="240"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="520" id="cUg-4V-g58"/>
