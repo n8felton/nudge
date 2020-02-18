@@ -25,7 +25,11 @@ from CoreFoundation import (
     CFPreferencesSetAppValue,
     CFPreferencesAppSynchronize,
 )
-from SystemConfiguration import SCDynamicStoreCopyConsoleUser
+from SystemConfiguration import (
+    SCDynamicStoreCopyConsoleUser,
+    SCPreferencesCreate,
+    SCPreferencesGetValue,
+)
 
 from nibbler import *
 import gurl
@@ -194,6 +198,12 @@ def get_console_username_info():
     """Uses Apple's SystemConfiguration framework to get the current
     console username"""
     return SCDynamicStoreCopyConsoleUser(None, None, None)
+
+
+def get_computername():
+    """Uses Apple's SystemConfiguration framework to get the ComputerName"""
+    prefs = SCPreferencesCreate(None, "SystemConfiguration", None)
+    return SCPreferencesGetValue(prefs, "System")["System"]["ComputerName"]
 
 
 def get_os_sub_build_version():
@@ -391,6 +401,9 @@ def main():
 
     # Get the current username
     user_name, current_user_uid, _ = get_console_username_info()
+
+    # Get the hostnme
+    computername = get_computername()
 
     # Bail if we are not in a user session.
     if user_name in (None, "loginwindow", "_mbsetupuser"):
@@ -715,8 +728,9 @@ def main():
     nudge.views["field.h1text"].setStringValue_(button_title_text)
     nudge.views["field.h2text"].setStringValue_(button_sub_titletext)
 
-    # Dynamically set username and serialnumber
+    # Dynamically set information fields
     nudge.views["field.username"].setStringValue_(str(user_name))
+    nudge.views["field.computername"].setStringValue_(str(computername))
     nudge.views["field.serialnumber"].setStringValue_(str(get_serial()))
     nudge.views["field.updated"].setStringValue_("No")
 
