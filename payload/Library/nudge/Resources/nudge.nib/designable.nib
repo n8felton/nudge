@@ -87,7 +87,7 @@
                             <constraint firstAttribute="width" constant="120" id="5hT-aB-Xcv"/>
                             <constraint firstAttribute="height" constant="20" id="dRe-lv-bjx"/>
                         </constraints>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="erik" allowsEditingTextAttributes="YES" id="DYU-vu-5Wl" userLabel="username">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" placeholderString="abc1234" allowsEditingTextAttributes="YES" id="DYU-vu-5Wl" userLabel="username">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -111,7 +111,7 @@
                             <constraint firstAttribute="width" constant="120" id="fkO-Zw-HG1"/>
                             <constraint firstAttribute="height" constant="20" id="uFb-N0-G9b"/>
                         </constraints>
-                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="C00000000000" allowsEditingTextAttributes="YES" id="FTX-xn-jhf" userLabel="serialnumber">
+                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="PPPYWSSSCCCC" allowsEditingTextAttributes="YES" id="FTX-xn-jhf" userLabel="serialnumber">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
