@@ -15,30 +15,35 @@
 # limitations under the License.
 
 # Only attempt to actively load the LaunchAgent if installing to a live system.
-if [[ $3 == "/" ]] ; then
+if [[ $3 == "/" ]]; then
   LAUNCHD_LABEL="com.erikng.nudge"
 
-  INSTALLER_USER=$(/usr/bin/stat -f '%Su' ${HOME})
-  INSTALLER_USER_UID=$(/usr/bin/id -u ${INSTALLER_USER})
-  echo "INSTALLER USER: ${INSTALLER_USER}"
-  echo "UID: ${INSTALLER_USER_UID}"
+  CONSOLE_USER=$(stat -f '%Su' /dev/console)
+  CONSOLE_USER_UID=$(id -u ${CONSOLE_USER})
+  echo "CONSOLE USER: ${CONSOLE_USER}"
+  echo "UID: ${CONSOLE_USER_UID}"
 
-  product_version=$(sw_vers -productVersion) # 10.14.6
-  os_vers=( ${(@s:.:)product_version} )      # ( 10 14 6 )
-  os_vers_major="${os_vers[1]}"              # 10
-  os_vers_minor="${os_vers[2]}"              # 14
-  os_vers_patch="${os_vers[3]}"              # 6
-  os_vers_build=$(sw_vers -buildVersion)     # 18G103
+  # Only install if there is an active user logged in.
+  # This helps to ignore _mbsetupuser and loginwindow scenarios
+  if [[ ${CONSOLE_USER_UID} > 500 ]]; then
 
-  # If we're on OS X 10.10 or older
-  if [[ "${os_vers_minor}" -le 10 ]]; then
-    launchctl asuser ${INSTALLER_USER_UID} launchctl load -w "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
-  else
-  # Assuming 10.11+
-    # Is the LaunchAgent already installed?
-    if launchctl blame gui/${INSTALLER_USER_UID}/$LAUNCHD_LABEL; then
-      launchctl bootout gui/${INSTALLER_USER_UID}/$LAUNCHD_LABEL
+    product_version=$(sw_vers -productVersion) # 10.14.6
+    os_vers=( ${(@s:.:)product_version} )      # ( 10 14 6 )
+    os_vers_major="${os_vers[1]}"              # 10
+    os_vers_minor="${os_vers[2]}"              # 14
+    os_vers_patch="${os_vers[3]}"              # 6
+    os_vers_build=$(sw_vers -buildVersion)     # 18G103
+
+    # If we're on OS X 10.10 or older
+    if [[ "${os_vers_minor}" -le 10 ]]; then
+      launchctl asuser ${CONSOLE_USER_UID} launchctl load -w "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
+    else
+    # Assuming 10.11+
+      # Is the LaunchAgent already installed?
+      if launchctl blame gui/${CONSOLE_USER_UID}/$LAUNCHD_LABEL; then
+        launchctl bootout gui/${CONSOLE_USER_UID}/$LAUNCHD_LABEL
+      fi
+      launchctl bootstrap gui/${CONSOLE_USER_UID} "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
     fi
-    launchctl bootstrap gui/${INSTALLER_USER_UID} "/Library/LaunchAgents/${LAUNCHD_LABEL}.plist"
   fi
 fi
